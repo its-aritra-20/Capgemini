@@ -9,7 +9,10 @@ public class PostDriver {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter the number of Users:");
 		int size=sc.nextInt();
-		User use=new User(3,"Honu");
+		sc.nextLine();
+		System.out.println("Enter User name:");
+		String userName=sc.nextLine();
+		User use=new User(3,userName);
 		boolean flag=true;
 		while(flag) {
 			System.out.println("Enter 1 to add ");
@@ -25,9 +28,9 @@ public class PostDriver {
 					System.out.println("Enter postDescription");
 					String postDescription=sc.next();
 					Post post=new Post(postDescription,id);
-					System.out.println("Enter Name");
-					String name=sc.next();
-					use.addUser(post,name);
+					//System.out.println("Enter Name");
+					//String name=sc.next();
+					use.addUser(post);
 					break;
 				case 2:
 					use.displayUsers();
@@ -36,6 +39,7 @@ public class PostDriver {
 					flag=false;
 					break;
 				}
+			
 		}
 	}
 
