@@ -8,6 +8,7 @@ public class Institute {
 
 	public Institute(String instituteName, List<Department> departments) {
 		this.instituteName = instituteName;
+		this.departments=departments;
 	}
 
 	public void addDepartment(Department department) {
