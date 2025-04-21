@@ -22,8 +22,8 @@ public class User {
 			return;
 		}
 		this.friends.add(friend);
-		friend.friends.add(this);
-		System.out.println("Added");
+		friend.friends.add(this);  
+		System.out.println(friend.name+" is Added to "+this.name+" friend list");
 	}
 	
 	public void joinGroup(Groups group) {
@@ -32,7 +32,9 @@ public class User {
 		}
 		
 		group.members.add(this);
-		groups.add(group);	
+		System.out.println(this.name+" is added to the group");
+		groups.add(group);
+		System.out.println("You have joined "+group.getGroupName());
 		
 	}
 	
@@ -42,8 +44,30 @@ public class User {
 		}
 		else {
 			groups.remove(group);
+			System.out.println("You are no longer in this group "+group.getGroupName());
 			group.members.remove(this);
+			System.out.println(this.name +"is removed");
 		}
+	}
+	
+	public void removeFriend(User friend) {
+		if(this.friends.contains(friend)) {
+			this.friends.remove(friend);
+			friend.friends.remove(this);
+			System.out.println(this.name+" is not a friend of "+friend.name);
+			return;
+		}
+		System.out.println("Friend not exists");
+	}
+	
+	public void displayFriends() {
+		for(User u:this.friends) {
+			System.out.println(u);
+		}
+	}
+	
+	public String toString() {
+		return this.name+" "+userId;
 	}
 	
 	

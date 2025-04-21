@@ -12,4 +12,8 @@ public class Groups {
 		this.name=name;
 		this.members=new ArrayList<User>();
 	}
+	
+	public String getGroupName() {
+		return this.name;
+	}
 }
