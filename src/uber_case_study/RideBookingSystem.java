@@ -1,5 +1,7 @@
 package uber_case_study;
 
+
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
@@ -31,9 +33,9 @@ public class RideBookingSystem {
 		}
 		else {
 			System.out.println();
-			rides.add(new Ride(customer,AvailableDrivers.getFirst(),"Booked"));
+			rides.add(new Ride(customer,AvailableDrivers.get(0),"Booked"));
 		}
-		return new Ride(customer,AvailableDrivers.getFirst(),"Unavailable");
+		return new Ride(customer,AvailableDrivers.get(0),"Unavailable");
 	}
 	
 	// C:\Users\User\Desktop\FileHandling\Uber

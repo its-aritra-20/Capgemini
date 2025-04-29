@@ -1,7 +1,9 @@
 package email_validator_practice;
 
 import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
+import day1.Pattern;
+import dummy.String;
 
 public class IsValidEmail {
 	public static void main(String[] args) {
