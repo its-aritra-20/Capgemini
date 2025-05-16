@@ -5,5 +5,6 @@ public class Driver {
 		Vehicle b=new Bike();
 		b.start();
 		b.print();
+		b.test();
 	}
 }
