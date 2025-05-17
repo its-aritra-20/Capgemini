@@ -17,5 +17,10 @@ public class Admin extends User{
 				return;
 			}
 		}
+		System.out.println("Event not found.");
 	}
+	@Override
+    public void showProfile() {
+        System.out.println("Admin ID: " + id + ", Name: " + name);
+    }
 }
