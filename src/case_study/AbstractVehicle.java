@@ -1,8 +1,8 @@
 package case_study;
 
 abstract class AbstractVehicle implements Vehicle {
-    protected String name;
-    protected int speed;
+    private String name;
+    private int speed;
 
     public AbstractVehicle(String name, int speed) {
         this.name = name;
@@ -22,6 +22,10 @@ abstract class AbstractVehicle implements Vehicle {
 
     public int getCurrentSpeed() {
         return speed;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void displayDetails() {
