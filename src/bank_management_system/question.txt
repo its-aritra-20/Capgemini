@@ -1,0 +1,31 @@
+1. Class: Customer
+Represents a bank customer using the ATM.
+- Attributes:
+- name: Stores the customer's name.
+- accountNumber: Unique identifier for each customer.
+- balance: Stores the current balance in the account.
+- pin: Secret code for authentication.
+- Methods:
+- viewBalance() -> void: Displays the customer's current balance.
+- authenticate(pin: int) -> boolean: Checks if the entered PIN matches the stored PIN.
+2. Class: ATM Machine
+Represents the ATM system that interacts with customers.
+- Attributes:
+- location: Stores the ATM’s location.
+- cashAvailable: Amount of cash currently available in the ATM.
+- Methods:
+- processTransaction(customer: Customer, account: BankAccount, amount: double, isWithdrawal: boolean) -> boolean:
+- Handles deposits and withdrawals by interacting with the BankAccount.
+- Ensures ATM has enough cash for withdrawals.
+- checkCashAvailability(amount: double) -> boolean:
+- Verifies if the ATM has sufficient cash for a requested withdrawal.
+3. Class: Bank Account
+Represents the customer's bank account linked to the ATM.
+- Attributes:
+- accountNumber: Links the account to a customer.
+- balance: Tracks available funds.
+- transactionHistory: Stores previous deposits and withdrawals.
+- Methods:
+- deposit(amount: double) -> void: Adds money to the account and records the transaction.
+- withdraw(amount: double) -> boolean: Deducts money if sufficient balance exists and records the transaction.
+- viewTransactionHistory() -> void: Displays the list of previous transactions.
