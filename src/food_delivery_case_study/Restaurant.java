@@ -1,4 +1,4 @@
-package food_delivery;
+package food_delivery_case_study;
 
 import java.util.ArrayList;
 import java.util.List;

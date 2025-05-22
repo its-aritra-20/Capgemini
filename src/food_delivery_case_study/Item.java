@@ -1,4 +1,4 @@
-package food_delivery;
+package food_delivery_case_study;
 
 public class Item {
 	private String itemName;

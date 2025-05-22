@@ -20,12 +20,12 @@ public class Bank {
 	public void removeCustomer(Customer customer) {
 		Iterator<Customer> itr=customers.iterator();
 		while(itr.hasNext()) {
-			if(itr.equals(customer)){
+			if(itr.next().equals(customer)){
 				itr.remove();
 				System.out.println("Bank Name : "+this.bankName+" Account Name : "+customer.getName()+" removed");
 				return;
 			}
-			itr.next();
+			//itr.next();
 			
 		}
 		System.out.println("Account not found ! ");

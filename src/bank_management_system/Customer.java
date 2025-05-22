@@ -2,12 +2,14 @@ package bank_management_system;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 public class Customer {
 	private String name;
 	private String accountNumber;
 	private double balance;
 	private String pin;
+	List<Bank> banks;
 	ArrayList<String> transactionHistory;
 
 	public Customer(String name, String accountNumber, double balance, String pin) {
@@ -16,7 +18,12 @@ public class Customer {
 		this.accountNumber = accountNumber;
 		this.balance = balance;
 		this.pin = pin;
+		banks=new ArrayList<>();
 		transactionHistory=new ArrayList<>();
+	}
+	
+	public void addBank(Bank bank) {
+		banks.add(bank);
 	}
 
 	public String getName() {

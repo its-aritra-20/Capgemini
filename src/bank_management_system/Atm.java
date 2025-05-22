@@ -1,7 +1,9 @@
 
 package bank_management_system;
 
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Scanner;
 
 public class Atm {
@@ -9,12 +11,15 @@ public class Atm {
 	public static Scanner sc=new Scanner(System.in);
 	private String location;
 	private double cashAvailable;
-	static int transactionId=100;
+	
+	private static int transactionId=100;
 
 	public Atm(String location, double cashAvailable) {
 		setLocation(location);
 		setCashAvailable(cashAvailable);
+		
 	}
+	
 
 	public String getLocation() {
 		return location;
@@ -34,7 +39,8 @@ public class Atm {
 	
 	public void processTransaction(Customer customer){
 		System.out.println("Enter the pin : ");
-		if(customer.authenticate(sc.next())) {
+		String pin=sc.next();
+		if(customer.authenticate(pin)) {
 			menu(customer);
 			return;
 		}
